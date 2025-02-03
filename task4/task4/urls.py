@@ -17,12 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from task4app.views import korzinka, games, menu_page
+from task5app.views import sign_up_by_django, sign_up_by_html
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', func_template),
     # path('class_template/', TemplateClass.as_view())
-    path('', menu_page),
+    # path('', menu_page),
     path('games/', games),
     path('cart/', korzinka),
+    path('', sign_up_by_django),
+    path('django_sign_up/', sign_up_by_html),
 ]
